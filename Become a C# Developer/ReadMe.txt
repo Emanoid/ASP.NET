@@ -1,1 +1,7 @@
-
+-To create a project click:
+-File
+-New Project
+-Console App (.NET Framework)
+-Name the Project
+-Chose the Location
+-Create 

@@ -6,8 +6,8 @@ Made an ASP.NET CORE API from documentation: https://docs.microsoft.com/en-us/as
 Main Lecture on Linkedin Learning: 'Building Web APIs with ASP.NET Web API 2.2'<br/>
 
 Prerequisites for Lecture:<br/>
--Become a C# developer[Covers .NET & ASP.NET] - watching now<br/>
--Learning Entity Framework 6.1.3[Covers ORMs(Object Relational Mappers)]<br/>
+-Become a C# developer[Covers .NET & ASP.NET] - completed<br/>
+-Learning Entity Framework 6.1.3[Covers ORMs(Object Relational Mappers)] - watching now<br/>
 #######################################################################################
 ASP.NET CORE - Design Registration and Signup Page
 Tutorial: https://www.youtube.com/watch?v=pU2VaJaDhyE

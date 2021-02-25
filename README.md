@@ -12,8 +12,8 @@ Prerequisites for Lecture:<br/>
 ASP.NET CORE - Design Registration and Signup Page<br/>
 Tutorial: https://www.youtube.com/watch?v=pU2VaJaDhyE <br/>
 Incomplete<br/>
-<br/>
 #######################################################################################<br/>
-ASP.NET CORE - LINKEDIN LEARNING<br/>
+ASP.NET CORE IDENTITY - LINKEDIN LEARNING<br/>
+
 
 <br/>

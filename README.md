@@ -10,4 +10,10 @@ Prerequisites for Lecture:<br/>
 -Learning Entity Framework 6.1.3[Covers ORMs(Object Relational Mappers)] - watching now<br/>
 #######################################################################################
 ASP.NET CORE - Design Registration and Signup Page
-Tutorial: https://www.youtube.com/watch?v=pU2VaJaDhyE
+Tutorial: https://www.youtube.com/watch?v=pU2VaJaDhyE <br/>
+Incomplete
+<br/>
+#######################################################################################
+ASP.NET CORE - LINKEDIN LEARNING
+
+<br/>

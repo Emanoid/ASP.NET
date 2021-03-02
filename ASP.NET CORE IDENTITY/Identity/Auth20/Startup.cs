@@ -1,6 +1,7 @@
 ﻿using Auth20.Data;
 using Auth20.Models;
 using Auth20.Services;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -87,6 +88,17 @@ namespace Auth20
                 options.User.RequireUniqueEmail = true;
             });
 
+            //Cookie Based Authentication
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(options =>
+                {
+                    options.LoginPath = "/Account/Login";
+                    options.LogoutPath = "/Account/Logout";
+                    options.Cookie.Name = "auth20_cookie";
+                    options.Cookie.HttpOnly = false;
+                    options.Cookie.SameSite = Microsoft.AspNetCore.Http.SameSiteMode.None;
+                });
+
             services.AddMvc();
 
 
@@ -112,6 +124,12 @@ namespace Auth20
             app.UseStaticFiles();
 
             app.UseAuthentication();
+
+            var cookiePolicyOptions = new CookiePolicyOptions()
+            {
+                MinimumSameSitePolicy = Microsoft.AspNetCore.Http.SameSiteMode.Strict
+            };
+            app.UseCookiePolicy(cookiePolicyOptions);
 
 
             app.UseMvc(routes =>

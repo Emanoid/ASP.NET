@@ -5,6 +5,7 @@ Ervis Trupja
 Full-Stack .NET Web Developer with a mathematical background
 View on LinkedIn  Follow on LinkedIn
 
+COMPLETE!!
 
 
 

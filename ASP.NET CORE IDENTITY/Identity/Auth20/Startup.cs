@@ -25,12 +25,11 @@ namespace Auth20
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+        //This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))
-                .UseLazyLoadingProxies());
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
@@ -88,16 +87,6 @@ namespace Auth20
                 options.User.RequireUniqueEmail = true;
             });
 
-            //Cookie Based Authentication
-            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-                .AddCookie(options =>
-                {
-                    options.LoginPath = "/Account/Login";
-                    options.LogoutPath = "/Account/Logout";
-                    options.Cookie.Name = "auth20_cookie";
-                    options.Cookie.HttpOnly = false;
-                    options.Cookie.SameSite = Microsoft.AspNetCore.Http.SameSiteMode.None;
-                });
 
             services.AddMvc();
 
@@ -125,11 +114,11 @@ namespace Auth20
 
             app.UseAuthentication();
 
-            var cookiePolicyOptions = new CookiePolicyOptions()
-            {
-                MinimumSameSitePolicy = Microsoft.AspNetCore.Http.SameSiteMode.Strict
-            };
-            app.UseCookiePolicy(cookiePolicyOptions);
+            //var cookiePolicyOptions = new CookiePolicyOptions()
+            //{
+            //    MinimumSameSitePolicy = Microsoft.AspNetCore.Http.SameSiteMode.Strict
+            //};
+            //app.UseCookiePolicy(cookiePolicyOptions);
 
 
             app.UseMvc(routes =>

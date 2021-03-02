@@ -1,6 +1,7 @@
 ﻿using Auth20.Data;
 using Auth20.Models;
 using Auth20.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -27,15 +28,46 @@ namespace Auth20
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))
+                .UseLazyLoadingProxies());
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
+            //Facebook
+            services.AddAuthentication()
+                .AddFacebook(options =>
+            {
+                options.AppId = "sslfsdsdf";
+                options.AppSecret = "34SLKDFJOSKJDFLSDJLKJs";
+            })
+
+            //Google
+            .AddGoogle(options =>
+                {
+                    IConfigurationSection googleAuthNSection =
+                        Configuration.GetSection("Authentication:Google");
+
+                    options.ClientId = googleAuthNSection["ClientId"];
+                    options.ClientSecret = googleAuthNSection["ClientSecret"];
+                })
+
+            //Azure
+            .AddOpenIdConnect("Azure AD", "Azure AD", options =>
+             {
+                 options.Authority = "https://login.windows.net/<Directory (tenant) ID>";
+                 options.ClientId = "<Your Application (client) ID>";;
+                 options.CallbackPath = "/signin-aad";
+                 options.SignedOutCallbackPath = "/signout-callback-aad";
+                 options.RemoteSignOutPath = "/signout-aad";
+             });
+
+
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
 
+            
 
 
 
@@ -80,6 +112,7 @@ namespace Auth20
             app.UseStaticFiles();
 
             app.UseAuthentication();
+
 
             app.UseMvc(routes =>
             {

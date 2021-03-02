@@ -8,6 +8,6 @@ namespace Auth22.Data
 {
     public class ApplicationUser : IdentityUser
     {
-        public string FullName { get; set; }
+        public virtual string FullName { get; set; }
     }
 }

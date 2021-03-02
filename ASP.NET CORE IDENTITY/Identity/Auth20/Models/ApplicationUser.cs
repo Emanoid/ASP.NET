@@ -9,7 +9,7 @@ namespace Auth20.Models
     // Add profile data for application users by adding properties to the ApplicationUser class
     public class ApplicationUser : IdentityUser
     {
-        public string Fullname { get; set; }
-        public int Age { get; set; }
+        public virtual string FullName { get; set; }
+        public virtual int Age { get; set; }
     }
 }

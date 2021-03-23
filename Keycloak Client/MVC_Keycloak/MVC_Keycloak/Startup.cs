@@ -36,7 +36,7 @@ namespace MVC_Keycloak
 
                 // Template-Specific Settings
                 SignInAsAuthenticationType = persistentAuthType, // Sets the above cookie with the Keycloak data
-                AuthenticationType = "KeycloakOwinAuthenticationSample_keycloak_auth", // Unique identifier for the auth middleware
+                AuthenticationType = "MVC_Keycloak_keycloak_auth", // Unique identifier for the auth middleware
             });
         }
     }

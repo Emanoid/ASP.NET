@@ -7,13 +7,14 @@ Main Lecture on Linkedin Learning: 'Building Web APIs with ASP.NET Web API 2.2'<
 
 Prerequisites for Lecture:<br/>
 -Become a C# developer[Covers .NET & ASP.NET] - completed<br/>
--Learning Entity Framework 6.1.3[Covers ORMs(Object Relational Mappers)] - watching now<br/>
+-Learning Entity Framework 6.1.3[Covers ORMs(Object Relational Mappers)] - watched<br/>
 #######################################################################################<br/>
 ASP.NET CORE - Design Registration and Signup Page<br/>
 Tutorial: https://www.youtube.com/watch?v=pU2VaJaDhyE <br/>
 Incomplete<br/>
 #######################################################################################<br/>
 ASP.NET CORE IDENTITY - LINKEDIN LEARNING<br/>
-
+#######################################################################################<br/>
+Intro to Web API - https://www.youtube.com/watch?v=vN9NRqv7xmY - watching now<br/>
 
 <br/>

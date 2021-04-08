@@ -15,6 +15,6 @@ Incomplete<br/>
 #######################################################################################<br/>
 ASP.NET CORE IDENTITY - LINKEDIN LEARNING<br/>
 #######################################################################################<br/>
-Intro to Web API - https://www.youtube.com/watch?v=vN9NRqv7xmY - watching now<br/>
+Intro to Web API - https://www.youtube.com/watch?v=vN9NRqv7xmY - Complete Check for some really Good References<br/>
 
 <br/>

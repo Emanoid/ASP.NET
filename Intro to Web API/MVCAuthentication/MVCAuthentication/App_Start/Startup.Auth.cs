@@ -6,6 +6,9 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using MVCAuthentication.Models;
+using Google.Authenticator;
+using System.Security.Claims;
+using System.Threading.Tasks;
 
 namespace MVCAuthentication
 {
@@ -57,12 +60,27 @@ namespace MVCAuthentication
             //app.UseFacebookAuthentication(
             //   appId: "",
             //   appSecret: "");
+            
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            var googleOptions = new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "180896382007-pucfimqo4sqohfm58a8s37m1r1nl7ag8.apps.googleusercontent.com",
+                ClientSecret = "SLXgvAokCeXRDQEXwj2Oxqpi",
+                Provider = new GoogleOAuth2AuthenticationProvider()
+                {
+                    OnAuthenticated = (context) =>
+                    {
+                        context.Identity.AddClaim(new Claim("urn:google:name", context.Identity.FindFirstValue(ClaimTypes.Name)));
+                        context.Identity.AddClaim(new Claim("urn:google:email", context.Identity.FindFirstValue(ClaimTypes.Email)));
+                        //This following line is need to retrieve the profile image
+                        context.Identity.AddClaim(new System.Security.Claims.Claim("urn:google:accesstoken", context.AccessToken, ClaimValueTypes.String, "Google"));
+
+                        return Task.FromResult(0);
+                    }
+                }
+            };
+
+            app.UseGoogleAuthentication(googleOptions);
         }
     }
 }

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCAuthentication", "MVCAuthentication\MVCAuthentication.csproj", "{B3871111-8516-4463-BF7B-D81B9F34100D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCAuthentication", "MVCAuthentication\MVCAuthentication.csproj", "{2B94D5BC-1EDB-4EE0-860B-318E3206A7C8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B3871111-8516-4463-BF7B-D81B9F34100D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B3871111-8516-4463-BF7B-D81B9F34100D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B3871111-8516-4463-BF7B-D81B9F34100D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B3871111-8516-4463-BF7B-D81B9F34100D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B94D5BC-1EDB-4EE0-860B-318E3206A7C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B94D5BC-1EDB-4EE0-860B-318E3206A7C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B94D5BC-1EDB-4EE0-860B-318E3206A7C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B94D5BC-1EDB-4EE0-860B-318E3206A7C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {0036470E-BC83-4CC5-B66C-161CC311298F}
+		SolutionGuid = {D782A5A8-095A-4916-B2B4-829F192D86B9}
 	EndGlobalSection
 EndGlobal

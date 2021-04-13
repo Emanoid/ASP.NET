@@ -7,3 +7,6 @@ Models are used to create Classes that the API interacts with!!
 #######################################################################################
 MVCDATAFromDatabasetoFrom
 https://www.youtube.com/watch?v=bIiEv__QNxw&t=1407s
+#######################################################################################
+MVCAuthentication
+https://www.youtube.com/watch?v=kpSwmLlMu9E

@@ -10,3 +10,6 @@ https://www.youtube.com/watch?v=bIiEv__QNxw&t=1407s
 #######################################################################################
 MVCAuthentication
 https://www.youtube.com/watch?v=kpSwmLlMu9E
+#######################################################################################
+ASP.NET DATABASES - SQL
+https://www.youtube.com/watch?v=ijDcHGxyqE4
